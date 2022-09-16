@@ -746,7 +746,7 @@ public:
         consensus.nFutureRewardShare = Consensus::FutureRewardShare(0.8,0.2,0.0);
 
         std::vector<FounderRewardStructure> rewardStructures = {  {INT_MAX, 5}  };// 5% founder/dev fee forever
-        consensus.nFounderPayment = FounderPayment(rewardStructures, 200, "tTiu15rN6PJFKqjBuLuNVHJAWKjNa5oibm");
+        consensus.nFounderPayment = FounderPayment(rewardStructures, 200, "TWjmZZVDn9Q1FjV1EmrPLCr5E66SDpkeWL");
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = false;
@@ -763,7 +763,7 @@ public:
         nPoolNewMaxParticipants = 20;
         nFulfilledRequestExpireTime = 5*60; // fulfilled requests expire in 5 minutes
 
-        vSporkAddresses = {"TYhZZmJ7D9ujbF98AbRo8sVFYaURmV7dZr"};
+        vSporkAddresses = {"TMvpapoZ3KiBtKXx4aT6qYF6DkE9gjpqjv"};
         nMinSporkKeys = 1;
         fBIP9CheckSmartnodesUpgraded = true;
 
