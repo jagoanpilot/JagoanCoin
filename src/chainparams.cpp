@@ -664,7 +664,7 @@ public:
         // consensus.DIP0003EnforcementHeight = 7300;
         consensus.powLimit = uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20
         consensus.nPowTargetTimespan = 24 * 60 * 60; // Jagoancoin: 1 day
-        consensus.nPowTargetSpacing = 60; // Jagoancoin: 1 minutes
+        consensus.nPowTargetSpacing = 10; // Jagoancoin: 10 seconds
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nPowDGWHeight = 60;
