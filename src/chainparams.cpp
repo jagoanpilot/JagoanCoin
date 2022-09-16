@@ -741,7 +741,7 @@ public:
 
         consensus.nCollaterals = SmartnodeCollaterals(
           {  {30000, 20000 * COIN}, {60000, 40000 * COIN}, {INT_MAX, 60000 * COIN}  },
-          {  {INT_MAX, 20}  });
+          {  {INT_MAX, 25}  });
 
         consensus.nFutureRewardShare = Consensus::FutureRewardShare(0.8,0.2,0.0);
 
