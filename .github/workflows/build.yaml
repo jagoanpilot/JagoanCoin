@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - main
-      - develop
+      - DevelopRun
   pull_request:
     branches:
-      - develop
+      - DevelopRun
 env:
   COIN_NAME: jagoancoin
   BUILD_DIR: jagoancoin-build
@@ -30,8 +30,8 @@ jobs:
         with:
           path: build.properties
           property: 'release-version'
-      - name: Read build.properties key for develop
-        if: ${{ github.event_name == 'pull_request' || github.ref == 'refs/heads/develop'}}
+      - name: Read build.properties key for DevelopRun
+        if: ${{ github.event_name == 'pull_request' || github.ref == 'refs/heads/DevelopRun'}}
         id: snapshot-version
         uses: christian-draeger/read-properties@1.0.1
         with:
@@ -42,7 +42,7 @@ jobs:
         run: |
           echo "BUILD_VERSION=${{ steps.release-version.outputs.value }}" > version.txt
       - name: create snapshot version
-        if: ${{ github.event_name == 'pull_request' || github.ref == 'refs/heads/develop'}}
+        if: ${{ github.event_name == 'pull_request' || github.ref == 'refs/heads/DevelopRun'}}
         run: |
           echo "BUILD_VERSION=${{ steps.snapshot-version.outputs.value }}" > version.txt
       - name: Upload Artifact
