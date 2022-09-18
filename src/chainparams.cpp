@@ -664,7 +664,7 @@ public:
         // consensus.DIP0003EnforcementHeight = 7300;
         consensus.powLimit = uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20
         consensus.nPowTargetTimespan = 24 * 60 * 60; // Jagoancoin: 1 day
-        consensus.nPowTargetSpacing = 60; // Jagoancoin: 1 minutes
+        consensus.nPowTargetSpacing = 1; // Jagoancoin: 1 seconds
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nPowDGWHeight = 60;
@@ -708,11 +708,11 @@ public:
 
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("seed00.jagoancoin.org");
-        vSeeds.emplace_back("seed01.jagoancoin.org");
-        vSeeds.emplace_back("seed02.jagoancoin.org");
-        vSeeds.emplace_back("seed03.jagoancoin.org");
-        vSeeds.emplace_back("seed04.jagoancoin.org");
+        vSeeds.emplace_back("47.254.243.177");
+        vSeeds.emplace_back("47.254.248.74");
+        vSeeds.emplace_back("47.254.215.242");
+        vSeeds.emplace_back("47.254.193.169");
+        vSeeds.emplace_back("47.254.46.123");
 
         // Testnet Jagoancoin addresses start with 'T'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,65);
@@ -740,13 +740,13 @@ public:
         consensus.llmqTypePlatform = Consensus::LLMQ_100_67;
 
         consensus.nCollaterals = SmartnodeCollaterals(
-          {  {30000, 20000 * COIN}, {60000, 40000 * COIN}, {INT_MAX, 60000 * COIN}  },
+          {  {500000, 2000 * COIN}, {1000000, 4000 * COIN}, {INT_MAX, 6000 * COIN}  },
           {  {INT_MAX, 20}  });
 
         consensus.nFutureRewardShare = Consensus::FutureRewardShare(0.8,0.2,0.0);
 
         std::vector<FounderRewardStructure> rewardStructures = {  {INT_MAX, 5}  };// 5% founder/dev fee forever
-        consensus.nFounderPayment = FounderPayment(rewardStructures, 200, "tTiu15rN6PJFKqjBuLuNVHJAWKjNa5oibm");
+        consensus.nFounderPayment = FounderPayment(rewardStructures, 200, "TW9X2zTAY18Fe8vtw7sxNuBWaHaeVZUdG9");
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = false;
@@ -763,7 +763,7 @@ public:
         nPoolNewMaxParticipants = 20;
         nFulfilledRequestExpireTime = 5*60; // fulfilled requests expire in 5 minutes
 
-        vSporkAddresses = {"TYhZZmJ7D9ujbF98AbRo8sVFYaURmV7dZr"};
+        vSporkAddresses = {"TFgozeyaLUj3MoFBa7zuaidB6VrjLcV3Tt"};
         nMinSporkKeys = 1;
         fBIP9CheckSmartnodesUpgraded = true;
 
