@@ -1168,26 +1168,26 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
     int tempHeight;              // number of blocks since last anchor     
     if (nPrevHeight < 840) {
         nSubsidy = 84; 
-    } else if ((nPrevHeight > 2000000) && (nPrevHeight < 4000000)) {
-        nSubsidy = 1600; 
+    } else if ((nPrevHeight > 25000) && (nPrevHeight < 4000000)) {
+        nSubsidy = 500; 
     } else if ((nPrevHeight > 4000000) && (nPrevHeight < 6000000)) {
-        nSubsidy = 1400;
+        nSubsidy = 450;
     } else if ((nPrevHeight > 6000000) && (nPrevHeight < 8000000)) {
-        nSubsidy = 1000;
+        nSubsidy = 400;
     } else if ((nPrevHeight > 8000000) && (nPrevHeight < 10000000)) {
-        nSubsidy = 800;     
+        nSubsidy = 350;     
     } else if ((nPrevHeight > 10000000) && (nPrevHeight < 12000000)) {
-        nSubsidy = 400;      
+        nSubsidy = 300;      
     } else if ((nPrevHeight > 12000000) && (nPrevHeight < 14000000)) {
-        nSubsidy = 200;     
+        nSubsidy = 250;     
     } else if ((nPrevHeight > 14000000) && (nPrevHeight < 16000000)) {
-        nSubsidy = 180;  
+        nSubsidy = 200;  
     } else if ((nPrevHeight > 16000000) && (nPrevHeight < 18000000)) {
-        nSubsidy = 160;      
+        nSubsidy = 175;      
     } else if ((nPrevHeight > 18000000) && (nPrevHeight < 20000000)) {
-        nSubsidy = 140;     
+        nSubsidy = 150;     
     } else if ((nPrevHeight > 20000000) && (nPrevHeight < 22000000)) {
-        nSubsidy = 120;    
+        nSubsidy = 125;    
     } else if ((nPrevHeight > 22000000) && (nPrevHeight < 24000000)) {
         nSubsidy = 100;     
     } else if ((nPrevHeight > 24000000) && (nPrevHeight < 26000000)) {
